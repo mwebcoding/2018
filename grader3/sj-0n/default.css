@@ -1,0 +1,364 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,700i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,300,300i,400,400i,800,800i');
+
+/*
+    Nanym+Gothic
+        font-family: "Nanum Gothic", sans-serif;
+    Open+Sans
+        font-family: "Open Sans", sans-serif;
+    raleway
+        font-family: "Raleway", sans-serif;
+*/
+
+/* reset */
+	html,body {margin:0; padding:0; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; font-weight:normal; font-size:12px; height:100%; color:#333; -webkit-text-size-adjust:none; position:relative; line-height:1.2;}
+	dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {margin:0; padding:0; -webkit-text-size-adjust:none;}
+	th,td,input,textarea,select {font-size:12px; color:#333; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; -webkit-text-size-adjust:none;}
+	th,td {word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none;}
+	table {border-spacing:0; border-collapse:collapse; -webkit-text-size-adjust:none; border:0; table-layout:fixed;}
+	address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; -webkit-text-size-adjust:none;}
+	em {font-style:normal; -webkit-text-size-adjust:none;}
+	ol,ul,li {list-style:none;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%;}
+	abbr,acronym {border:0;}
+	hr,legend,caption {visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
+	img,fieldset {border:0 none;}
+	label {cursor:pointer;}
+	a {color:inherit;}
+	a:link, a:visited, a:hover {color:inherit; text-decoration:none;}
+	a:active {text-decoration:none;}
+	input,img {vertical-align:middle;}
+
+
+
+/*layout*/
+
+
+
+
+
+
+/*header*/
+
+#header_container{
+    position: fixed;
+    left: 0;    right: 0;    top:0;
+    width: 100%;    height: 80px;
+    z-index: 3000;
+    background-color: #2E2D30;
+}
+
+#header_container .header_inner{
+    width: 1280px;
+    height: 100%;
+    position:relative;
+    margin: 0 auto;
+}
+
+#header_container .logo{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    margin-top: -21px;
+}
+
+#header_container .gnb_wrap{
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    right: 30px;
+}
+
+
+#header_container .gnb_wrap li{
+    float:left;
+    margin-left: 40px;
+    
+}
+
+#header_container .gnb_wrap ul li:first-child{
+    margin-left: 0;
+}
+
+#header_container .gnb_wrap ul li a{
+    display: block;
+    color: white;
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px;
+    font-family: "Raleway";
+    text-transform: uppercase;
+}
+
+#header_container .gnb_wrap ul li a:hover{
+    color:#fa0064;
+}
+
+
+
+
+
+
+
+
+
+
+/*intro*/
+
+.intro_section{
+    height: 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+    /*패딩80px를 제외한 100프로!*/
+    min-width: 1280px;
+}
+
+.intro_section .intro_inner{
+    height: 100%;
+    background: url(./img/bg_intro02.jpg) center center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    position: relative;
+   /* 백그라운드는 백그라운드 단축 먼저 한 다음에 사이즈 코드가 와야함. 사이즈 먼저하고 백그라운드 이미지를 주면 안먹힘.*/
+}
+
+.intro_section .intro_inner::before{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.65);
+/*        부모자식의 배경 포지션을 따라가게 됨, 부모의 포지션이 없으면 부모의부모까지 따라감. 그래서 intro_inner에 포지션이 없다면, 이 dim효과가 내비까지 겹쳐져 보여질 것임.부모자식의 배경 포지션을 따라가게 됨, 부모의 포지션이 없으면 부모의부모까지 따라감. 그래서 intro_inner에 포지션이 없다면, 이 dim효과가 내비까지 겹쳐져 보여질 것임.*/
+    
+}
+.intro_section .intro_inner::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    /*박스 수직정렬하는 방법 중 하나임,. 부모가 내비 80px를 제외한 영역을 가지고 있으니 height가 100퍼이고  vertical-align: 이 middle이니 내비를 제외한 영역 가운데로 오게 되는 거임. 
+*/}
+
+/*html5작성하고 css3로 작성하려면 after앞에 클론 2개가 들어가는게 정확한 것임. 근데 문제점은 html5에서만 작동하고 인터넷익스플로러 8 이상에서만 작동됨.*/
+.intro_section .intro_inner .content{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+/*    before에 position을 주어서 before에 검정 오퍼시티 있는 배경이 맨 위로 올라오게 되었는데, 그러면 흰글씨도 감춰져있게 되니까 다시 맨 위로 올려주기 위해서 position:relative를 주는 것.*/
+    color: #fff;
+}
+
+.intro_section .intro_inner .content h2{
+    font-size: 86px;
+    font-family: "Open Sans";
+}
+
+.intro_section .intro_inner .content p{
+    font-size: 24px;
+    font-family: "Raleway";
+    font-weight: 100;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+/*body_with_section*/
+
+.section{
+    min-width: 1290px;
+    min-height: 800px;
+    box-sizing: border-box;
+    padding: 85px 0;
+}
+
+.section .title{
+    font-family: "Raleway";
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section .subText{
+    font-family: "Raleway";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    color:#999;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*body_about*/
+
+#ab{
+    background-color: #f8f9fa;
+}
+
+#ab .content_wrap{
+    width: 900px;
+    min-height: 350px;
+    padding-left: 450px;
+    box-sizing: border-box;
+    margin: 120px auto 0;
+          /*상    좌우  하*/
+    position: relative;
+}
+
+
+
+
+
+
+
+/*프로필 사진*/
+
+
+#ab .content_wrap .profile{
+    position: absolute;
+    border-radius: 50%;
+    /*왼쪽 위에서부터 오른쪽 위, 오른쪽 아래, 왼쪽 아래 순서로 50px 20px 10px 30px 로 줄 수 있음*/
+    width: 300px;
+    height: 300px;
+    left: 25px;
+    top: 0;
+    box-shadow: 4px 4px 10px #ccc;
+/*             x좌표 y좌표 spread color*/
+    overflow: hidden;
+}
+
+#ab .content_wrap .profile img{
+    width: 100%;
+    height: 100%;
+}
+
+#ab .content_wrap .contBox .name{
+    font-size: 32px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#ab .content_wrap .contBox .job{
+    color: #666;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+    font-family: "Raleway";
+}
+
+#ab .content_wrap .contBox .sns {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#ab .content_wrap .contBox .sns li{
+    float: left;
+    margin-right: 15px;
+}
+
+#ab .content_wrap .contBox .sns li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*소개부분*/
+#ab .content_wrap .infoBox{
+    margin-top: 15px;
+}
+
+#ab .content_wrap .infoBox table{
+    width: 100%;
+}
+
+#ab .content_wrap .infoBox table th{
+    width: 90px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    vertical-align: top;
+    padding: 6px 0;
+}
+
+#ab .content_wrap .infoBox table td{
+    color: #666;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 6px 0;
+}
+
+#ab .content_wrap .infoBox table a{
+    text-decoration: underline;
+    text-decoration-color: lightslategrey;
+    color: #666;
+}
+
+
+
+
+
+
+
+/*body_skillt*/
+
+#sk{
+    
+}
+
+
+
+
+/*body_portfolio*/
+
+#pf{
+    background-color: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
