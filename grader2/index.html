@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 프로젝트 UI개발 작업리스트 </title>
+ 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet" />
+	<style>
+		@charset "utf-8"; 
+		* {margin:0; padding:0;}
+		html ,body { height:100%; margin:0; padding:0; border:0px; color:#75767b; font-size:14px; font-family:NanumGothic,"나눔고딕", Dotum,"돋움",Helvetica,AppleSDGothicNeo,Arial,sans-serif; letter-spacing:-1px;}
+
+		th,td,input,textarea,select {font-size:14px; color:#666; font-family:"맑은 고딕",Malgun Gothic,"돋움",Dotum;}
+		th,td {word-break:break-all; word-wrap:break-word;}
+		table {border-spacing:0; border-collapse:collapse; width:100%;}
+		ol,ul,li {list-style:none;}
+		h1,h2,h3,h4,h5,h6 {font-size:100%; line-height:normal;}
+		img, fieldset {border:0 none;}
+		label {cursor:pointer;}
+		a, a:focus, a:hover, a:active {color:#27e; text-decoration:underline;}
+
+		.container {width:98%; margin:0 auto; padding-bottom:50px;}
+
+		.header {position:relative; box-sizing:border-box; padding:20px 0;}
+		.header h1 {color:#333; font-size:18px;}
+		.header h1 span {color:#e9002d;}
+		.header dl {padding-top:10px; line-height:20px;}
+		.header dt {color:#333; font-weight:bold; display:inline-block; vertical-align:middle; width:70px;}
+		.header dd {display:inline-block; vertical-align:middle;}
+		.header dd a {padding:0 3px;}
+		.header dd a:hover {color:#fff; background-color:#e9002d;}
+
+		.header .guide {overflow:hidden; position:absolute; bottom:10px; right:10px;}
+		.header .guide li {float:left; border:1px solid #aeaeae; margin-left:2px; padding:0 6px; line-height:18px; height:18px; text-align:center; font-size:11px; letter-spacing:-1px;}
+		.header .guide li.added {background:#fef3f4;}
+		.header .guide li.modify {background:#fefcd2;}
+		.header .guide li.deleted {background:#eee; color:#aeaeae;}
+		.header .shortcut {padding-right:150px;}
+		.header .shortcut a::after {content:"↓";}
+
+		.section {border-top:2px solid #e9002d; border-bottom:1px solid #ddd; margin-bottom:20px;}
+		.section table {}
+		.section table caption {display:none;}
+		.section table thead th {color:#666; background-color:#eee; padding:8px; border:1px solid #ddd; border-top:0;}
+		.section table thead tr:first-child th {}
+		.section table tbody th {padding:8px; color:#333; border-left:1px solid #ddd; border-top:1px solid #ddd;}
+		.section table tbody .gp {border-top:0;}
+		.section table tbody td {padding:8px; text-align:left; color:#333; border:1px solid #ddd; border-bottom:0;}
+		.section table tbody td.depth {text-align:center;}
+		.section table tbody tr:hover th,
+		.section table tbody tr:hover td {background-color:#f9f9f9;}
+		.section table tbody tr.del th,
+		.section table tbody tr.del td {background-color:#eee; color:#aeaeae;}
+		.section table tbody tr.del td a {color:#aeaeae;}
+		.section table tbody tr.del td a:hover {font-style:normal;}
+		.section table tbody tr.mod td {background-color:#fefcd2 !important;}
+		.section table tbody tr.add td {background-color:#fef3f4 !important;}
+		.section table tbody td .ct {padding-top:6px;}
+		.section a {display:block;}
+		.section a:hover {font-style:italic;}
+
+		.notice {padding-top:20px;}
+	</style>
+
+	<script type="text/javascript">
+		$(function(){
+
+			$(".header .numFile").text($(".container .section tbody tr:not(.del)").length);
+
+		})
+	</script>
+</head>
+<body>
+
+
+
+<div class="container" id="container">
+
+	<!-- s: header -->
+	<div class="header">
+		<div class="inner">
+			<h1>[ 코딩리스트 : <span>미림여자정보과학고등학교 2018학년도 2학년 1학기 - 웹코딩</span> ]</h1>
+			<dl>
+				<dt>총 학생 수</dt>
+				<dd class="numFile">00</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- e: header -->
+
+
+
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<col width="30%;" />
+			<col />
+			<thead>
+				<tr>
+					<th scope="col">학번/이름</th>
+					<th scope="col">URL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="depth">2306염현지</td>
+					<td><a href="yeom_52/index.html">yeom_52/index.html</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+</div>
+
+
+
+</html>
