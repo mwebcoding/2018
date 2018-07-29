@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,300i,400,400i,800,800i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700,700i");
+
+/*
+font-family: "nanum Gothic", san-serif;
+font-family: "Noto Sans KR", san-serif;
+font-family: "Raleway", san-serif;
+*/
+
+/* reset */
+	html,body {margin:0; padding:0; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; font-weight:normal; font-size:12px; height:100%; color:#333; -webkit-text-size-adjust:none; position:relative; line-height:1.2;}
+	dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {margin:0; padding:0; -webkit-text-size-adjust:none;}
+	th,td,input,textarea,select {font-size:12px; color:#333; font-family:"나눔고딕","Nanum Gothic","Helvetica Neue",Arial,sans-serif; -webkit-text-size-adjust:none;}
+	th,td {word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none;}
+	table {border-spacing:0; border-collapse:collapse; -webkit-text-size-adjust:none; border:0; table-layout:fixed;}
+	address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; -webkit-text-size-adjust:none;}
+	em {font-style:normal; -webkit-text-size-adjust:none;}
+	ol,ul,li {list-style:none;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%;}
+	abbr,acronym {border:0;}
+	hr,legend,caption {visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
+	img,fieldset {border:0 none;}
+	label {cursor:pointer;}
+	a {color:#inherit;}
+	a:link, a:visited, a:hover {color:inherit; text-decoration:none;}
+	a:active {text-decoration:none;}
+	input,img {vertical-align:middle;}
+/* end */
+
+/* layout start */
+	#header_content {
+		position:fixed;
+		left:0; top:0;
+		width:100%; height:80px;
+		background-color:#7CC4D6;
+		z-index: 3000;
+	}
+	/* 헤더 */
+	#header_content .header_inner{
+		width:1280px; height:100%;
+		position:relative;
+		margin:0 auto;
+	}
+	/* 로고 */
+	#header_content .logo {
+		position:absolute; left:30px; top:50%;
+		margin-top:-15px;
+	}
+	/* 네비게이션 */
+	#header_content .gnb_wrap {
+		position:absolute; right:30px; top:50%;
+		margin-top:-18px;
+	}
+
+	#header_content .gnb_wrap li {
+		float:left; margin-left:40px;
+	}
+
+
+	#header_content .gnb_wrap li a {
+		display:block;
+		height:36px; line-height:36px;
+		color:#fff; font-size:18px; 
+		font-family:"Raleway", san-serif;
+		text-transform:uppercase;
+	}
+
+	#header_content .gnb_wrap li a:hover {
+		color:#4C6CFA;
+	}
+	/* 인트로 */
+	.intro_s {
+		height:100%; padding-top:80px;
+		box-sizing:border-box;
+		min-width: 1280px;
+	}
+
+	.intro_s .intro_in {
+		height:100%;
+		background:url(http://postfiles7.naver.net/MjAxNzAyMTNfMjc4/MDAxNDg2OTkzNzU1OTg0.hxYaKDlDcYDmGs4Xe6Or9xa1InCAF5f9-e0Zm9QVl64g.Wdcf5uLfz5AZXSie747Ivu0JJQSoOpZ1xl6afe53u6gg.GIF.choiixx93/%EB%8B%A8%EC%B2%B413.gif?type=w773) 0 0 no-repeat; 
+		background-size:100% 100%;
+		text-align:center; position:relative;
+	}
+	/* 인트로 딤드 */
+	.intro_s .intro_in:before {
+		content:""; position:absolute;
+		left:0; right:0; top:0; bottom:0;
+		background-color:rgba(0,0,0,0.55);
+	}
+	/* 타이틀 정렬 */
+	.intro_s .intro_in:after {
+		content:""; display:inline-block;
+		vertical-align:middle; height:100%;
+	}
+
+	.intro_s .intro_in .content {
+		display:inline-block; vertical-align:middle;
+		color:#fff; position:relative;
+	}
+	/* 타이틀 */
+	.intro_s .intro_in .content h2 { 
+		font-size:86px; font-family:"Open sans", sans-serif; 
+	}
+	/* 타이틀 세부 글 */
+	.intro_s .intro_in .content p {
+		font-size:20px; font-style:italic; 
+		font-family:"Raleway", sans-serif; font-weight:100;
+		line-height:1.5; margin-top:20px;
+	}
+
+	/* 바디 컨테이너 */
+	.section {
+		min-width:1280px; min-height:800px;
+		box-sizing:border-box; padding:85px 0;
+	}
+
+	.section .title {
+		font-size:40px; text-align:center;
+		font-family:"Raleway", sans-serif;
+		text-transform:uppercase;
+        color:#4C6CFA;
+	}
+
+	.section .subtxt {
+		font-size:15px; text-align:center;
+		font-family:"Raleway", sans-serif;
+		color:#7698BC; font-style:italic;
+		margin-top:15px; font-weight:300;
+		line-height:1.5;
+	}
+	/* about */
+	#about {
+		background-color:#EFF7F8;
+	}
+	#about .content_wrap {
+		width:900px; min-height:350px;
+		padding-left:450px;
+		box-sizing:border-box;
+		margin:120px auto 0;
+		position:relative;
+	}
+
+	#about .content_wrap .profile {
+		position:absolute; left:0; top:0;
+		width:350px; height:350px;
+		border-radius:50%;
+		overflow:hidden;
+		box-shadow:4px 4px 10px #ccc;
+	}
+
+	#about .content_wrap .profile img {
+		width:100%; height:100%;
+	}
+	/* contbox */
+	#about .content_wrap .contbox {
+		
+	}
+
+	#about .content_wrap .contbox .name{
+		font-size:32px;
+		font-family:"Open sans", sans-serif; 
+
+	}
+
+	/* skill */
+	#skill {
+		background-color:#F8FBFC;
+
+	}
+	/* work */
+	#work {
+		background-color:#EFF7F8;
+	}
