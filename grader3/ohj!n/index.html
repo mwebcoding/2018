@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<title> Eo Jin's portfolio </title>
 	<link rel="stylesheet" href="css/default.css">
-	<link rel="shortcut icon" href="myimg/favicon (1).ico">
+	<link rel="shortcut icon" href="myimg/favicon (1).ico"> <!-- 파비콘은 바로가기 아이콘으로 탭에 표시되는 아이콘이다. -->
 </head>
 <body>
 
 	<!-- s: header -->
 	<header id="header_container">
 		<div class="header_inner">
-			<h1 class="logo"> <a href="#"><img src="./myimg/logo.png" width="65" height="42" /></a> </h1>
-
+			<h1 class="logo"> <a href="#"><img src="./myimg/logo.png" width="65" height="42" alt="ohj!n 로고" /></a> </h1>
+<!-- alt는 이미지에 대한 설명으로 이미지가 깨졌을 때 이 글자가 표시된다. -->
 			<nav class="gnb_wrap">
 				<ul>
 				<li><a href="#about_section">about</a></li>
@@ -29,7 +29,7 @@
 		<div class="intro_inner">
 			<div class="content">
 				<h2>My Portfolio</h2>
-				<p>Add Awesome Design My life. <br /></p>
+				<p>Add Awesome Design to My life. <br /></p>
 			</div>
 		</div>
 	</section>
@@ -45,12 +45,48 @@
 			<!-- s : content -->
 			<div class="content_wrap">
 				<div class="profile"> 
-					<img src="myimg/myphoto.png">
+					<img src="myimg/myphoto.png" alt="프로필">
 				</div>
 
 				<!-- s:contBox -->
 				<div class="contBox">
 					<h3 class="name">Lee Eo Jin</h3>
+					<span class="job">Web Designer</span>
+					<ul class="sns">
+						<li><a href="#" target="_blank"><img src="images/ico_sns01.png" alt="페이스북"></a></li>
+						<!-- 새창으로 열리게 -->
+						<li><a href="#" target="_blank"><img src="images/ico_sns02.png" alt="트위터"></a></li>
+						<li><a href="#" target="_blank"><img src="images/ico_sns03.png" alt="인스타그램"></a></li>
+					</ul>
+
+
+
+
+
+					<div class="info">
+						<table>
+							<tbody>
+								<tr>
+									<th>Birthday.</th>
+									<td>2000.07.17</td>
+								</tr>					<tr>
+									<th>Phone.</th>
+									<td><a href="tel:010-7502-6933">010-7502-6933</a></td>
+									<!-- 클릭했을 때 자동으로 전화 걸어줌 -->
+								</tr>					<tr>
+									<th>E-mail.</th>
+									<td><a href="mailto:joo4834@naver.com">joo4834@naver.com</a></td>
+								</tr>					<tr>
+									<th>Education.</th>
+									<td>
+									2016.03 미림여자정보과학고등학교 입학
+									<br>
+									2019.02 미림여자정보과학고등학교 졸업예정
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 				<!-- e:contBox -->
 
@@ -65,13 +101,148 @@
 		<section class="section" id="skill_section"> 
 			<h2 class="title">skill</h2>
 			<p class="subtext">Let Me Show You My Design Skill.</p>
+			<div class="skill_box">
+				<ul>
+						<li class="skill_ps">
+							<div class="ps"><img src="images/img_skill01.png" alt="Photoshop"></div>
+							<strong class="text">Photoshop</strong>
+							<!-- div와 같은 선상에 strong을 만들어줘야한다 -->
+						</li>					
+						<li class="skill_il">
+							<div class="il"><img src="images/img_skill02.png" alt="Illustrator"></div>
+							<strong class="text">Illustrator</strong>
+						</li>
+						<li class="skill_id">
+							<div class="id"><img src="images/img_skill03.png" alt="Indesign"></div>
+							<strong class="text">Indesign</strong>
+						</li>
+						<li class="skill_ae">
+							<div class="ae"><img src="images/img_skill04.png" alt="after Effects"></div>
+							<strong class="text">After Effects</strong>
+						</li>
+						<li class="skill_max">
+							<div class="max"><img src="images/img_skill05.png" alt="3DS MAX"></div>
+							<strong class="text">3DS MAX</strong>
+						</li>
+					
+				</ul>
+			</div>
 		</section>
 		<!-- e: skill -->
 
 		<!-- s: portfolio -->
 		<section class="section" id="portfolio_section">
 			<h2 class="title">portfolio</h2>
-			<p class="subtext">It's My Works Story.</p>
+			<p class="subtext">It's My design Story.</p>
+			<!-- s : content -->
+			<div class="content_wrap">
+				<ul>
+					<!-- s : item -->
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_01.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">小통하는 공간, SNS</h3>
+							<em class="type">WEB DESIGN</em>
+							<p class="desc">SNS의 실상은 小통하는 공간 즉, 작게 통하는 공간이다. 작은 공간 속 일어날 수 있는 모든 이슈들이 들어있다. 이러한 SNS의 모든 것을 파헤쳐보자. </p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_02.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">인천아빠다의 인천수호작전</h3>
+							<em class="type">CHARACTER DESIGN</em>
+							<p class="desc">인천아빠다의 인천수호대작전! 인천아빠다는 인천을 지키기위해 하루종일 인천을 수호한다. 그리고 그의 가족들이 항상 응원하는데.. 과연 인천아빠다의 운명은 ? </p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_03.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">빅판을 아시나요?</h3>
+							<em class="type">INFORMATION DESIGN</em>
+							<p class="desc">빅판, 단순 노숙자가 아닌 자생을 위해 노력하는 그들이다. 과연 그들은 하루하루 어떻게 살아갈까 ? 의미있는 그들의 삶을 살펴보자.</p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_04.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">반려식물 브랜드, 새 잎</h3>
+							<em class="type">BRANDING</em>
+							<p class="desc">계절이 지나가고 새잎은 하나하나 나고 우리들의 집도 새잎이 가득 찬다. 가족 같은 나의 반려식물 입양브랜드, 새 잎 </p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_05.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">Yell Pay</h3>
+							<em class="type">APP DESIGN</em>
+							<p class="desc">시각 및 상지장애인들을 위한 음성인식결제어플, YELL PAY. 여러분들도 'YELL PAY'에 외쳐보세요 ! </p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_06.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">그 곳</h3>
+							<em class="type">APP DESIGN</em>
+							<p class="desc">척박한 삶에 한줄기 빛이 되어주는 여행, 자신이 원하는 분위기의 여행을 떠나보자 ! 기호에 따른 여행지 추천 어플 '그 곳'</p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_07.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">아이스크림 먹으러 가는 길 - </h3>
+							<em class="type">WEB DESIGN</em>
+							<p class="desc">어떤 아이스크림을 원하는가 ? 당장 먹고 싶은 아이스크림의 맛, 토핑을 적어 아이스크림을 추천받아 보자 ! </p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_08.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">어진사용설명서</h3>
+							<em class="type">IDENTITY DESIGN</em>
+							<p class="desc">호기로운 디자이너 '이어진'을 소개한다. 리플렛 한 장이면 모든 것을 알 수 있다 ? 유쾌통쾌한 어진 사용 설명서를 파헤쳐보자 !</p>
+						</div>
+					</li>
+
+					<li class="item">
+						<div class="thumbBox">
+							<img src="myimg/img_data_09.png" alt=" 썸네일">
+						</div>
+						<div class="contBox">
+							<h3 class="tit">TRAPPED 엽서</h3>
+							<em class="type">ARTWORK</em>
+							<p class="desc">지금은 스마트한 세상, 스마트한 문자메시지 대신 옛 감성 듬뿍 담은 엽서를 써보는건 어떨까 ?  </p>
+						</div>
+					</li>
+
+
+					<!-- e : item -->
+
+				</ul>
+			</div>
+			<!-- e : content -->
 		</section>
 		<!-- e: portfolio -->
 
@@ -79,7 +250,9 @@
 	<!-- e: body -->
 
 	<!-- s:footer -->
-	<footer id="footer_container"></footer>
+	<footer id="footer_container">
+		<p class="cp">Copyright ⓒ 2018. Eo Jin. Lee. All right reserved.</p>
+	</footer>
  	<!-- e: footer -->
 
 

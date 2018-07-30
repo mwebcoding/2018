@@ -35,7 +35,7 @@ Raleway
 
 /* S : Header */
 
-#header_container{ position:fixed; left:0; top:0; width:100%; height:80px; background-color:#212529; z-index:3000; }
+#header_container{ position:fixed; left:0; top:0; width:100%; height:80px; background-color:#406c79; z-index:3000; }
 
 #header_container .header_inner{width:1280px; height:100%; position:relative; margin:0 auto; }
 
@@ -47,7 +47,11 @@ Raleway
 
 #header_container .gnb_wrap li a {display:block; color:white; height:36px; line-height:36px; font-size:18px; font-family: 'Raleway', sans-serif; text-transform:uppercase; }
 
-#header_container .gnb_wrap li a:hover {color:#fa0064;}
+#body_container .gnb_wrap {min-width:1280px;}
+
+#footer_container .gnb_wrap {min-width:1290px;}
+
+
 
 
 /* S : Intro */
@@ -64,18 +68,22 @@ Raleway
 
 .intro_section .intro_inner {text-align:center;}
 
-.intro_section .intro_inner .content h2 {font-size:96px; font-family: 'Open Sans', sans-serif; }
+.intro_section .intro_inner .content h2 {font-size:86px; font-family: 'Open Sans', sans-serif; }
 
-.intro_section .intro_inner .content p {font-size:24px; font-style:italic; font-family: 'Raleway', sans-serif; font-weight:100; line-height:1.5; margin-top:25px; }
+.intro_section .intro_inner .content p {font-size:18px; font-style:italic; font-family: 'Raleway', sans-serif; font-weight:100; line-height:1.5; margin-top:20px; }
+
+
 
 
 /* S : Section (공통) */
 
 .section {min-width:1280px; min-height:800px; box-sizing:border-box; padding:85px 0; }
 
-.section .title {text-align:center; font-size:30px; font-family: 'Raleway', sans-serif; text-transform:uppercase;  }
+.section .title {text-align:center; font-size:30px; font-family: 'Raleway', sans-serif; text-transform:uppercase; }
 
-.section .subText {text-align:center; font-size:16px; font-color:#999; font-style:italic; font-family: 'Raleway', sans-serif; margin-top:15px; font-weight:300; }
+.section .subText {text-align:center; font-size:16px; font-color:#f78b8e; font-style:italic; font-family: 'Raleway', sans-serif; margin-top:15px; font-weight:300; }
+
+
 
 
 /* S : about */
@@ -88,17 +96,163 @@ Raleway
 
 #about_section .content_wrap .profile img {width:100%; height:100%; }
 
-#about_section .content_wrap .contBox { }
+#about_section .content_wrap .name {font-size:32px; font-family: 'Open Sans', sans-serif; color:#e97585; }
 
-#about_section .content_wrap .name {font-size:32px; font-family: 'Open Sans', sans-serif;  }
+#about_section .content_wrap .contBox .job {color:#666; font-size:18px; font-family: 'Raleway', sans-serif; display:block; margin-top:5px; }
+
+#about_section .content_wrap .contBox .sns { font-size:0; margin-top:25px; }
+
+#about_section .content_wrap .contBox .sns li { display:inline-block; vertical-align:middle; margin-left:10px; }
+
+#about_section .content_wrap .contBox .sns li:first-child {margin-left:0;}
+
+#about_section .content_wrap .contBox .sns a { display:inline-block; background-color:#000; border-radius:50px; }
+
+#about_section .content_wrap .contBox .sns a:hover {background-color:#406c79; }
+
+#about_section .content_wrap .contBox .sns img {width:50px; height:50px; }
+
+#about_section .content_wrap .contBox .info { margin-top:15px; }
+
+#about_section .content_wrap .contBox .info table { width:100%; }
+
+#about_section .content_wrap .contBox .info th { text-align:left; font-size:16px; width:100px; font-weight:normal; padding:6px 0; vertical-align:top; }
+
+#about_section .content_wrap .contBox .info td { font-size:16px; color:#666; padding:6px 0; }
+
+#about_section .content_wrap .contBox .info td a{text-decoration:underline;}
 
 
-/* S : Skill */
 
-#skill_section {   }
+
+
+/* S : Skill By Me */
+
+/*;;
+#skill_section li { float:left; }
+
+#skill_section .content_wrap { font-size:0 ; text-align: center; }
+
+#skill_section .content_wrap li {display:inline-block; vertical-align:top; margin-left:60px;}
+
+#skill_section .content_wrap li:first-child{margin-left:0;}
+
+#skill_section .content_wrap li .ico {line-height:156px; kfborder-radius:50%; width:180px; width:180px; border-width:12px; border-style:solid; box-sizing:border-box;}
+
+#skill_section .content_wrap li .ico:after {content:""; display}
+
+#skill_section .content_wrap li .ico .ps {background-color:#001d26;  border-color:#00c8ff;}
+
+#skill_section .content_wrap li .ico .ps {background-color:#001d26;  border-color:#00c8ff;}
+
+#skill_section .content_wrap li .ico .ps {background-color:#001d26;  border-color:#00c8ff;}
+
+#skill_section .content_wrap li .ico .ps {background-color:#001d26;  border-color:#00c8ff;}
+
+#skill_section .content_wrap li .ico .ps {background-color:#001d26;  border-color:#00c8ff;}
+
+#skill_section .content_wrap li .name{ font-szie:18px; font-family: 'Open Sans', sans-serif; }
+
+
+
+*/
+
+
+/* 내가함 */
+
+#skill_section li { float:left; }
+
+#skill_section .ico { border-radius:50%; width:156px; height:156px; }
+/* 요 위 ico에 overflow:hidden을 하면 scale을 크게 했을 때 넘어가는 것은 짤린다.*/
+/*#skill_section li .ico:hover img {transform:scale(1.5,1.3);}
+#skill_section li .ico:hover img {transform:rotate(45deg);}*/
+#skill_section li .ico:hover img {transform:translate(10px,5px);}
+
+/* 부드럽게 해주는것 */
+#skill_section li .ico img {transition:all 0.3s}
+
+#skill_section .ps { background-color:#001d26; border-size:100px 100px; border:12px solid #00c8ff; }
+
+#skill_section .ai { background-color:#261300; border-size:100px 100px; border:12px solid #ff7c00; }
+
+#skill_section .id { background-color:#280012; border-size:100px 100px; border:12px solid #ff3f94; }
+
+#skill_section .ae { background-color:#1f003f; border-size:100px 100px; border:12px solid #cf91ff; }
+
+#skill_section .max { background-color:#09a1a1;; border-size:100px 100px; border:12px solid #09a1a1; }
+
+#skill_section .skill:after {content:""; display:block; clear:both; }
+
+#skill_section li {margin:30px; padding-top:160px;}
+
+#skill_section .skill {text-align:center; line-height:157px; width:1200px; margin:0 auto;}
+
+#skill_section .name {font-weight:bold; font-size:24px; font-family: 'Open Sans', sans-serif; text-align:center; padding:0 100px; padding-bottom:160px;}
+
+#skill_section .pss{margin-right: 110px;}
+
+#skill_section .ais{margin-right: 110px;}
+
+#skill_section .ids{margin-right: 120px;}
+
+#skill_section .aes{margin-right: 110px;}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* S : Work */
 
-#work_section {background-color:#f3f3f3;  }
+#work_section {background-color:#f3f3f3;}
+
+#work_section .content_wrap { }
+
+#work_section .content_wrap ul{width:1160px; margin:0 auto; overflow:hidden; }
+
+#work_section .content_wrap .item{width:360px; height:490px; background-color:white; border:1px solid #d3d3d3; float:left; margin:40px 0 0 40px; box-sizing:border-box;}
+
+#work_section .content_wrap .item:nth-child(3n+1) { margin-left:0;}
+
+#work_section .content_wrap .item .thumbBox {height:350px; overflow:hidden; }
+
+#work_section .content_wrap .item .thumbBox img {width:100%; height:100%; }
+
+#work_section .content_wrap .item .contBox {padding:15px 15px 0; }
+
+#work_section .content_wrap .item .contBox .tit { font-size:18px; }
+
+#work_section .content_wrap .item .contBox .type { display:inline-block; margin-top:8px; font-size:15px; color:#fa0064;}
+
+#work_section .content_wrap .item .contBox .desc { margin-top:10px; color:#999; line-height:16px; height:48px; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:3;
+-webkit-box-orient: vertical; display: -webkit-box; word-wrap:break-word; -o-text-overflow:ellipsis;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* S : Work */
+
+#footer_container .bg {background-color:#212529; height:100px; }
+
+#footer_container p {color:white; font-size:16px; letter-spacing: -1px; text-align:center; line-height:100px;}
+
+
 

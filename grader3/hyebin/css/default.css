@@ -67,6 +67,23 @@
 		color:#fa0064;
 	}
 
+	#body_container {
+		min-width:1280px;
+	} 
+
+	#footer_container {
+		min-width:1280px;
+		background-color:#212529;
+	} 
+
+	#footer_container .copy {
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		line-height: 100px;
+	}
+
+
 	/*intro*/
 	.intro_section {
 		height:100%; padding-top:80px;
@@ -165,13 +182,186 @@
 		font-family: 'Open sasns', sans-serif;
 	}
 
+	#about_section .content_wrap .contbox .job {
+		color:#666; font-size:18px;
+		margin-top:5px; display:block;
+		font-family: "Raleway", sans-serif;
+	}
+
+	#about_section .content_wrap .contbox .sns {
+		font-size:0; margin-top:25px;
+	}
+
+	#about_section .content_wrap .contbox .sns li {
+		display:inline-block; vertical-align:middle;
+		margin-left:10px;
+	}
+
+	#about_section .content_wrap .contbox .sns li:first-child {
+		margin-left:0;
+	}
+
+	#about_section .content_wrap .contbox .sns a {
+		display:block; background-color:#000;
+		border-radius:50%;
+	}
+
+	#about_section .content_wrap .contbox .sns a:hover {
+		background-color:#fa0064;
+	}
+
+	#about_section .content_wrap .contbox .sns img {
+		width:50px; height:50px;
+	}
+
+	#about_section .content_wrap .contbox .info {
+		margin-top: 15px;
+	}
+
+	#about_section .content_wrap .contbox .info table th {
+		text-align:left; font-size:16px;
+		width:100px; font-weight:normal;
+		padding:6px 0; vertical-align:top;
+	}
+	#about_section .content_wrap .contbox .info table td {
+		font-size:16px; padding:6px 0;
+		color:#666;
+	}
+
+	#about_section .content_wrap .contbox .info table td a {
+		text-decoration:underline;
+	}
+
 	/*skill*/
 	#skill_section {
+		min-width: 1280px;
+		min-height: 800px;
+		box-sizing: border-box;
+	}
 
+	#skill_section .content{
+		text-align: center;
+		font-size: 0;
+		margin-top: 160px;
+	}
+
+	#skill_section .content li{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 30px;
+		font-size: 28px;
+
+	}
+
+	#skill_section .content .icon{
+		width: 180px;
+		height: 180px;
+		box-sizing: border-box;
+		display: block;
+	}
+
+	#skill_section .content .icon::after{
+		display: inline-block;
+		content: "";
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	#skill_section .content p{
+		display: block;
+		font-family: 'Open sasns', sans-serif;
+		margin-top: 20px;
+		letter-spacing: -1px;
+	}
+	#skill_section .content .icon img {
+		transition:all 0.3s;
+	}
+
+	#skill_section .content .icon:hover img {
+		transform: scale(1.2);
+	}
+
+	#skill_section .content .icon.ps{
+		background-color: #001d26;
+		border: 12px solid #00c8ff;
+		border-radius: 50%;
+	}
+
+	#skill_section .content .icon.ai{
+		background-color: #261300;
+		border: 12px solid #ff7c00;
+		border-radius: 50%;
+	}
+
+	#skill_section .content .icon.id{
+		background-color: #280012;
+		border: 12px solid #ff3f94;
+		border-radius: 50%;
+	}
+
+	#skill_section .content .icon.ae{
+		background-color: #1f003f;
+		border: 12px solid #cf91ff;
+		border-radius: 50%;
+	}
+
+	#skill_section .content .icon.max{
+		background-color: #09a1a1;
+		border-radius: 50%;
 	}
 
 	/*portfolio*/
 	#portfolio_section {
 		background-color:#f3f3f3;
 	}
+
+	#portfolio_section .content_wrap {}
+	#portfolio_section .content_wrap ul {
+		width:1160px;
+		margin: 0 auto;
+		overflow:hidden;
+	}
+	#portfolio_section .content_wrap .item {
+		width: 360px; height: 490px;
+		background-color: #fff;
+		float: left; margin: 40px 0 0 40px;
+		border:1px solid #b3b3b3; 
+		box-sizing: border-box;
+	}
+	#portfolio_section .content_wrap .item:nth-child(3n+1) {
+		margin-left: 0; 
+	}
+	#portfolio_section .content_wrap .item .thumbbox {
+		height: 358px; overflow: hidden;
+	}
+	#portfolio_section .content_wrap .item .thumbbox img {
+		width: 100%; height: 100%
+	}
+	#portfolio_section .content_wrap .item .contbox {
+		padding: 15px 15px 0;
+	} 
+	#portfolio_section .content_wrap .item .contbox .tit {
+		font-size: 18px
+	}
+	#portfolio_section .content_wrap .item .contbox .type {
+		color: #fa0064;
+		display: block;
+		margin-top: 8px;
+	}
+	#portfolio_section .content_wrap .item .contbox .desc {
+		color: #999;
+		line-height: 16px; height: 48px;
+		margin-top: 10px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		-webkit-line-clamp:3; /* 넷째줄에서 ... 표시 */
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		word-wrap:break-word;
+		-o-text-overflow:ellipsis;
+	}
+
+
+
+
 

@@ -43,6 +43,8 @@ Raleway
 	#header_container .gnb_wrap li a {display:block; height:36px; line-height:36px; color:#fff;
 		font-size:18px; font-family: "Raleway", sans-serif; text-transform:uppercase;}
 	#header_container .gnb_wrap li a:hover {color:#fa0064;}
+	#body_container {min-width: 1280px;}
+	#footer_container {min-width: 1280px;}
 
 	/*intro*/
 	.intro_section {height:100%; padding-top:80px; box-sizing:border-box; min-width: 1280px;}
@@ -73,25 +75,72 @@ Raleway
 
 	#about_section .content_wrap .contBox {line-height: 1.4;}
 	#about_section .content_wrap .contBox .name {font-size:32px; font-family: "Open Sans", sans-serif;}
+	#about_section .content_wrap .contBox .job {color:#666; font-size: 16px; margin-top:5px; display: block; font-family: "Raleway", sans-serif; }
 
-	#about_section .content_wrap .icon_wrap ul li {background-color:black; display:inline-block; margin-right:20px;
-		border-radius:50%; margin-top: 15px; margin-bottom: 20px;}
-	#about_section .content_wrap .icon_wrap ul li a:hover {}
+	#about_section .content_wrap .icon_wrap ul li {display:inline-block; margin-right:20px; margin-top: 15px; margin-bottom: 20px;}
+	#about_section .content_wrap .icon_wrap ul li a {display: block; background-color: black; border-radius:50%;}
+	#about_section .content_wrap .icon_wrap ul li a:hover {background-color:#fa0064;}
+	#about_section .content_wrap .icon_wrap img {width: 50px; height:50px;}
 
-	#about_section .content_wrap .table_wrap tr, td {word-break: break-all; word-wrap: break-word;}
-	#about_section .content_wrap .table_wrap th {border-collapse:collapse; margin-top: 20px; font-size: 16px; line-height: 1.4;
-		text-align: left; vertical-align: top;}
+	#about_section .content_wrap .table_wrap table {width:100%;}
+	#about_section .content_wrap .table_wrap tbody {word-break: break-all; word-wrap: break-word;}
+	#about_section .content_wrap .table_wrap th {width:100px; border-collapse:collapse; font-size: 16px; line-height: 1.4;
+		text-align: left; vertical-align:top; padding:6px 0; font-weight:normal;}
 	#about_section .content_wrap .table_wrap td {border-collapse:collapse; margin-top: 20px; font-size: 16px; line-height: 1.4;
-		text-align: left; padding-left: 15px;}
+		text-align: left; padding:6px 0; color:#666;}
+	#about_section .content_wrap .table_wrap td a {text-decoration:underline;}
 
 	/*skill*/
 	#skill_section {}
+	#skill_section .skill_wrap {text-align: center; margin-top:160px; font-size: 0px;}
+	#skill_section .skill_wrap ul {display: block;}
+	#skill_section .skill_wrap li {display: inline-block; vertical-align: middle; margin-left: 30px;}
+	#skill_section .skill_wrap li:first-child {margin-left: 0px;}
+	#skill_section .skill_wrap li strong {font-size: 28px; display:block; margin-top:20px; font-family: "Open Sans", sans-serif;}
+	#skill_section .skill_wrap .ps div {width: 180px; height:180px; border: 12px solid #00c8ff; background-color: #001d26; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .ai div {width: 180px; height:180px; border: 12px solid #ff7c00; background-color: #261300; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .id div {width: 180px; height:180px; border: 12px solid #ff3f94; background-color: #280012; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .ae div {width: 180px; height:180px; border: 12px solid #cf91ff; background-color: #1f003f; border-radius:50%; box-sizing:border-box;}
+	#skill_section .skill_wrap .max div {width: 180px; height:180px; background-color: #09a1a1; border-radius:50%;}
+	#skill_section .skill_wrap div::after {content:""; display:inline-block; height: 100%; vertical-align: middle; }
+		/*div에 공통적인 부분을 넣고 유니크한 부분만 따로 빼면 더 간단해질 듯! div에다 보더까지 다 준 상태로 색상만 바꿔줘도 OK*/
+
+	#skill_section .skill_wrap li div {overflow: hidden;}
+	#skill_section .skill_wrap li div:hover img {transform:scale(1.2) rotate(5deg);}
+	#skill_section .skill_wrap li div img {transition: all 0.2s;} /*부드럽게 전환*/
 
 	/*portfolio*/
 	#portfolio_section {background-color:#f8f9fa;}
+	#portfolio_section .content_wrap ul {width: 1160px; margin:0 auto; overflow:hidden;}
+	#portfolio_section .content_wrap .item {width:360px; height:490px; background-color:#fff;
+		float:left; margin:40px 0 0 40px; border: 1px solid #d3d3d3; box-sizing: border-box;}
+	#portfolio_section .content_wrap .item:nth-child(3n+1) {margin-left:0;}
 
-보낼때 중요한 점
+	#portfolio_section .content_wrap .item .thumbBox {height:358px; overflow: hidden; position:relative;}
+	#portfolio_section .content_wrap .item .thumbBox img {width:100%; height:100%;}
+	#portfolio_section .content_wrap .item .contBox {padding: 15px 15px 0;}
+	#portfolio_section .content_wrap .item .contBox .tit {font-size: 18px;}
+	#portfolio_section .content_wrap .item .contBox .type {color:#fa0064; margin-top:8px; display:block;}
+	#portfolio_section .content_wrap .item .contBox .desc {color:#999; line-height:16px; height: 48px; overflow: hidden;
+		margin-top: 10px;
+		/*말줄임css*/
+		text-overflow:ellipsis; -webkit-line-clamp:3; /* 셋째줄에서 ... 표시 */ -webkit-box-orient: vertical; display: -webkit-box;
+		word-wrap:break-word; -o-text-overflow:ellipsis;}
+
+	#portfolio_section .content_wrap .item div:hover img {background-color:rgba(0,0,0,0.6); transform:scale(1.1)}
+    #portfolio_section .content_wrap .item a:hover .pclass {display: block; }
+    #portfolio_section .content_wrap .item .thumbBox p::after{content: "";border: 1px solid #fff; position: absolute; left: 5px; right: 5px; top: 5px; bottom: 5px; }
+	#portfolio_section .content_wrap .item .thumbBox p {display: none; text-transform: uppercase; position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.8); color: #fff; line-height: 358px; text-align: center; font-size: 26px; font-weight: 100;}
+	/*#portfolio_section .content_wrap .item:hover p {display: block;}*/
+	#portfolio_section .content_wrap .item div img {transition: all 0.2s;}
+
+	/*footer*/
+	#footer_container .copy {width: 100%; height:100px; background-color: #212529; color:#fff; font-size: 16px; letter-spacing: -1px;
+		text-align: center; line-height: 100px;}
+
+/*보낼때 중요한 점
 1. 프로젝트 폴더 전체를 통째로 보내기 (파일명 노 상관)
 2. 메일 주소로 zip 파일 보내기
-3. 제목: 3410이도현(원하는 경로적기)
-    ex. 3404김문정(bigbang) 경로 띄어쓰기 X 숫자는 뒤에만 추가
+3. 제목: 3410이도현_ldhportfolio
+    ex. 3404김문정_bigbang 경로 띄어쓰기 X 숫자는 뒤에만 추가*/

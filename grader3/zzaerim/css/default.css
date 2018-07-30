@@ -136,6 +136,10 @@
 
 
 /*body*/
+.body_container {
+	min-width: 1280px;
+}
+
 .section {
 	min-width: 1280px;
 	min-height: 800px;
@@ -202,6 +206,67 @@
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
 	color: #666;
+	display: block;
+	margin-top: 3px;
+}
+
+#about .content_wrap .contBox .sns {
+	font-size: 0;
+	margin-top: 25px;
+}
+
+#about .content_wrap .contBox .sns li {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+
+#about .content_wrap .contBox .sns li:first-child {
+	margin-left: 0px;
+}
+
+#about .content_wrap .contBox .sns a {
+	display: block;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+#about .content_wrap .contBox .sns a:hover {
+	background-color: #179191;
+}
+
+#about .content_wrap .contBox .sns img {
+	width: 50px; height: 50px;
+}
+
+#about .content_wrap .contBox .info {
+	margin-top: 15px;
+}
+
+#about .content_wrap .contBox .info table {
+	width: 100%;
+}
+
+#about .content_wrap .contBox .info tr {
+	vertical-align: top;
+}
+
+#about .content_wrap .contBox .info th {
+	width: 100px;
+	text-align: left;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 6px 0;
+}
+
+#about .content_wrap .contBox .info td {
+	font-size: 16px;
+	color: #666;
+	padding: 6px 0;
+}
+
+#about .content_wrap .contBox .info td a {
+	text-decoration: underline;
 }
 
 
@@ -209,8 +274,155 @@
 #skill {
 }
 
+#skill ul {
+	display: block;
+	margin-top: 130px;
+	text-align: center;
+	font-size: 0; /*화이트스페이스 없애는 방법*/
+}
+
+#skill ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 60px;
+}
+
+#skill ul li:first-child {
+	margin-left: 0;
+}
+
+#skill ul li div {
+	width: 180px; height: 180px;
+	border-radius: 50%;
+	overflow: hidden;
+    box-sizing: border-box;
+}
+
+#skill ul li div::after {
+	content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+#skill ul li div img {
+	transition: all 0.3s;
+}
+
+#skill ul li div:hover img {
+	transform: scale(1.1,1.1) rotate(15deg);
+}
+
+#skill ul li div.ps {
+	background-color: #001d26;
+	border: 12px solid #00c8ff;
+}
+
+#skill ul li div.ai {
+	background-color: #261300;
+	border: 12px solid #ff7c00;
+}
+
+#skill ul li div.id {
+	background-color: #280012;
+	border: 12px solid #ff3f94;
+}
+
+#skill ul li div.ae {
+	background-color: #1f003f;
+	border: 12px solid #cf91ff;
+}
+
+#skill ul li div.max {
+	background-color: #09a1a1;
+}
+
+#skill ul li strong {
+	font-family: "Open Sans", sans-serif;
+	font-size: 28px;
+	display: inline-block;
+	margin-top: 20px;
+}
 
 /*portfolio*/
 #portfolio {
 	background-color: #f2f2f2;
+}
+
+#portfolio .content_wrap {
+
+}
+
+#portfolio .content_wrap ul {
+	width: 1160px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#portfolio .content_wrap .item {
+	width: 360px; height: 490px;
+	background-color: #fff;
+	float: left;
+	margin: 40px 0 0 40px;
+	border: 1px solid #d3d3d3;
+	box-sizing: border-box;
+}
+
+#portfolio .content_wrap .item:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+#portfolio .content_wrap .item .thumbBox {
+	height: 358px;
+	overflow: hidden;
+}
+
+#portfolio .content_wrap .item .thumbBox img {
+	width: 100%; height: 100%;
+}
+
+#portfolio .content_wrap .item .contBox {
+	padding: 15px 15px 0;
+}
+
+#portfolio .content_wrap .item .contBox .tit {
+	font-size: 18px;	
+}
+
+#portfolio .content_wrap .item .contBox .type {
+	color: #179191;
+	display: block;
+	margin-top: 8px;
+	text-transform: uppercase;
+}
+
+#portfolio .content_wrap .item .contBox .dis {
+	color: #999;
+	line-height: 16px;
+	height: 48px;
+	overflow: hidden;
+	margin-top: 10px;
+	text-align: justify;
+	text-overflow:ellipsis;
+	-webkit-line-clamp:3; /* 셋째줄에서 ... 표시 */
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	word-wrap:break-word;
+	-o-text-overflow:ellipsis;
+}
+
+
+/*footer*/
+#footer_container {
+	min-width: 1280px;
+}
+
+#footer_container .copy {
+	height: 100px;
+	background-color: #333;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: -0.5px;
+	line-height: 100px;
 }

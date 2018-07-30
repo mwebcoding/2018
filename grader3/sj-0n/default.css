@@ -47,7 +47,7 @@
     left: 0;    right: 0;    top:0;
     width: 100%;    height: 80px;
     z-index: 3000;
-    background-color: #2E2D30;
+    background-color: #2a353b;
 }
 
 #header_container .header_inner{
@@ -93,7 +93,7 @@
 }
 
 #header_container .gnb_wrap ul li a:hover{
-    color:#fa0064;
+    color:#e84a5f;
 }
 
 
@@ -118,6 +118,7 @@
 .intro_section .intro_inner{
     height: 100%;
     background: url(./img/bg_intro02.jpg) center center no-repeat;
+    background-attachment: fixed;
     background-size: 100% 100%;
     text-align: center;
     position: relative;
@@ -186,6 +187,7 @@
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
+    color: #ff847c;
 }
 
 .section .subText{
@@ -263,6 +265,7 @@
     display: block;
     margin-top: 10px;
     font-family: "Raleway";
+    
 }
 
 #ab .content_wrap .contBox .sns {
@@ -283,7 +286,9 @@
     border-radius: 50%;
 }
 
-
+#ab .content_wrap .contBox .sns li a:hover{
+    background-color:#99b898;
+}
 
 
 
@@ -305,12 +310,13 @@
 }
 
 #ab .content_wrap .infoBox table th{
-    width: 90px;
+    width: 95px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
     text-align: left;
     vertical-align: top;
+/*    education부분에만 하고 싶으면 eduxation이 포함되어있는 tr에만 class를 따로 부여해 vertical-align을 주면 됨. 근데 th,td전부 상단정렬하고 싶으면 table이 있는 div에  display:table-cell 한 후 vertical align을 주면 되는데, 이럴땐 table만 있는 div를 줘야하고, cell크기를 하나하나 직접 입력해야 하며 다소 복잡한 부분이 생김. */
     padding: 6px 0;
 }
 
@@ -321,13 +327,18 @@
     padding: 6px 0;
 }
 
+/*패딩은 th랑 td에 모두 줘서 위아래 여백이 있도록 만들기~*/
+
 #ab .content_wrap .infoBox table a{
+    display: block;
     text-decoration: underline;
-    text-decoration-color: lightslategrey;
+    text-decoration-color: #99b898;
     color: #666;
 }
 
 
+
+/*a끼리는 마진을 따로 안줘도 살짝씩 떨어져있음. 그럴땐 font-size:0px; 를 줘야 여백이 없어보임. 이런게 이론에 없는 실무라고 하신다,, 그리고 0은 0자체이기 때문에 단위같은거 없어도 괜찮음*/
 
 
 
@@ -335,9 +346,95 @@
 
 /*body_skillt*/
 
-#sk{
+#sk .wrap{
+    font-size: 0;
+    text-align: center;
+    margin-top: 160px;
+}
+
+#sk .wrap li{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 28px;
+    margin: 0 30px;
+
+}
+
+#sk .wrap li .ico{
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#sk .wrap li .ico::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+#sk .wrap li h2{
+    display: block;
+    margin-top: 20px;
+    font-family: "Open Sans";
+    letter-spacing: -1px;
+}
+
+/*마우스 갖다두면 이미지 커지게 하는 코드 (아래)*/
+#sk .wrap li .ico:hover img{
+    transform: scale(1.1,1.1) rotate(10deg);
+}
+/*두개 다 같은 값이라면 그냥 scale(1.1)써도 무관함. 그리고 크기 각도 그런거 띄어쓰기만 하면 중복사용가능~*/
+
+#sk .wrap li .ico img{
+    transition: all 0.3s;
+}
+
+
+
+
+
+/*skill 아이콘 컬러*/
+
+#sk .wrap li .ico.ps{
+    background-color: #001d26;
+    border: 12px solid #00c8ff;
     
 }
+
+#sk .wrap li .ico.il{
+    background-color: #261300;
+    border: 12px solid #ff7c00;
+    
+}
+
+#sk .wrap li .ico.in{
+    background-color: #280012;
+    border: 12px solid #ff3f94;
+    
+}
+
+#sk .wrap li .ico.ae{
+    background-color: #1f003f;
+    border: 12px solid #cf91ff;
+    
+}
+
+#sk .wrap li .ico.max{
+    background-color: #09a1a1;
+    
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -348,6 +445,84 @@
     background-color: #f8f9fa;
 }
 
+#pf .wrap{
+    text-align: center;
+    width: 1200px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+
+#pf .wrap li{
+    box-sizing: border-box;
+/*    overflow: hidden;*/
+    width: 360px;
+    margin: 20px;
+    height: 490px;
+    float: left;
+    border: 1px solid #d3d3d3;
+}
+
+#pf .wrap li a{
+    display: block;
+    height: 100%;
+    font-size: 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/*포트폴리오 이미지 부분*/
+
+#pf .wrap .img{
+    width: 358px;
+    height: 358px;
+    position: relative;
+    overflow: hidden;
+}
+
+#pf .wrap .img img{
+    width: 358px;
+    height: 358px;
+}
+
+#pf .wrap li{
+    background-color: #fff;
+}
+
+#pf .wrap li h2{
+    display: none;
+    left: 0; right: 0; top: 0; bottom: 0;
+    position: absolute;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgba(235,29,72,0.8);
+    line-height: 358px;
+    text-align: center;
+    font-family: "Raleway" , sans-serif;
+    font-weight: 100;
+    
+}
+
+#pf .wrap li h2::after{
+    content: "";
+    position: absolute;
+    left: 5px; right: 5px; top: 5px; bottom: 5px;
+    border: 1px solid #fff;
+}
+
+
+#pf .wrap a:hover h2{
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+}
 
 
 
@@ -360,5 +535,63 @@
 
 
 
+/*포트폴리오 텍스트부분*/
+
+#pf .wrap .pfli .text{
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+#pf .wrap .pfli .text h3{
+    font-size: 18px;
+    font-family: "Nanum Gothic", sans-serif;
+    text-align: left;
+    margin: 10px;
+    color: black;
+    font-weight: 700;
+}
+
+#pf .wrap .pfli .text .type{
+    margin: 10px;
+    color: #ff847c;
+    font-family: "Raleway", sans-serif;
+    font-weight: 00;
+    text-transform: uppercase;
+}
+
+#pf .wrap .pfli .text .txt{
+    margin: 10px;
+    color: #999;
+    font-family: "Nanum Gothic", sans-serif;
+    line-height: 16px;
+    height: 48px;
+    overflow: hidden;
+    
+ text-overflow:ellipsis;
+-webkit-line-clamp:3; /* 셋째줄에서 ... 표시 */
+-webkit-box-orient: vertical;
+display: -webkit-box;
+word-wrap:break-word;
+-o-text-overflow:ellipsis;
+}
+
+    
+    
+    
+    
+    
 
 
+
+/*푸터*/
+
+#footer_container p{
+    background-color: #2a353b;
+    height: 80px;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 14px;
+    font-family: "Raleway" , sans-serif;
+    width: 100%;
+}

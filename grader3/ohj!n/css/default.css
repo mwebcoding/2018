@@ -36,6 +36,9 @@
 	input,img {vertical-align:middle;}
 
 /*layout*/
+
+/*돔트리 형식(들어가고 들어가고..)으로 스타일 부여*/
+
 	#header_container {
 		position: fixed;
 		z-index: 3000;
@@ -71,6 +74,14 @@
 
 	#header_container li a:hover {
 		color:#fa0064;
+	}
+
+	#body_container {
+		min-width: 1280px;
+	}
+
+	#footer_contatiner {
+		min-width: 1280px;
 	}
 
 
@@ -180,13 +191,224 @@
 		font-family: "Open Sans", sans-serif;
 	}
 
+	#about_section .content_wrap .contBox .job {
+		color: #666; font-size: 18px; /*color: #333; 조금 더 진한 회색 : 타이틀에 많이 쓰임*/
+		margin-top: 5px; display: block; /*다음에 요소가 더 나올수도 있으니까 or 이름과 job사이에 상하마진을 주기 위해 inline인 것을 block으로 바꿔준다.*/
+		font-family: "Raleway", sans-serif;
+	}
 
+	#about_section .content_wrap .contBox .sns {
+		font-size:0; 	/*이때 li에 구조상 각 요소 사이에 화이트스페이스가 생긴다. 그래서 li위,즉 ul에 폰트사이즈를 0으로 줘야 화이트스페이스를 초기화시킬 수 있다. 그 후 li와 a에 폰트사이즈를 다시 부여한다. 그 후 각 요소들 사이에 마진을 주기 위해 li에 margin:left를 10으로 준다. 그 후 li의 첫 번째 자식에만 first:child를 통해 margin:left를 0으로 준다.*/
+		margin-top: 25px; /*job과 sns사이 마진 주기*/
 
+	}
+	#about_section .content_wrap .contBox .sns li {
+		display: inline-block; vertical-align: middle;
+		margin-left: 10px; /*각 요소들 사이 마진*/
+	}
+	#about_section .content_wrap .contBox .sns li:first-child {
+		margin-left: 0;
+	}
+
+	/*가상 엘리먼트는 ':' 한개 */
+
+	#about_section .content_wrap .contBox .sns a {
+		display: block; background-color: #000;
+		border-radius: 50%;
+	}
+
+	#about_section .content_wrap .contBox .sns a:hover {
+		background-color: #fa0064;
+	}
+
+	#about_section .content_wrap .contBox .sns img {
+		width: 50px; height: 50px; /*고정값 부여*/
+	}
+
+	#about_section .content_wrap .contBox .info { /*< 테이블을 감싸는 div*/
+		margin-top: 15px; /*테이블과 아이콘 사이의 간격주기*/
+	}
+	#about_section .content_wrap .contBox .info table {
+		width: 100%; /*너비를 100%로*/
+	}
+	#about_section .content_wrap .contBox .info tbody th {
+		text-align: left; /*좌측정렬*/ font-size:  16px; 
+		width: 100px; font-weight: normal; /*가로고정값 주고 굵은거 빼주기*/
+		padding: 6px 0; vertical-align: top; /*각 요소들 상단정렬*/
+	}
+	#about_section .content_wrap .contBox .info tbody td {
+		font-size: 16px; color: #666;
+		padding: 6px 0; /*각 td들의 패딩 top/bottom값을 줘도 되지만 각 tr 사이에 선이 들어가있는 경우도 있기 때문에 패딩을 상하로 줘야 사이값이 알맞게 들어간다.*/
+	}
+	/*tbody tr th 이런식이 아니라 어차피 tbody안엔 th 하나밖에 없으므로 경로를 생략해줄 수 있다.*/
+
+	#about_section .content_wrap .contBox .info tbody td a {
+		text-decoration: underline; /*밑줄 쳐주기*/
+	}
 /*skill_section*/
-	 #skill_section{}
+	 #skill_section .skill_box { 
+	 	margin-top: 160px;
+	 	vertical-align: middle;
+	 	text-align: center;
+
+	 }	 
+	 /*전체박스에 타이틀과 구분하기 위한 마진탑주고 verticall-align으로 세로 가운데정렬 text-align으로 가로 가운데정렬*/
+
+	 #skill_section .skill_box li div {
+	 	width: 180px;
+	 	height: 180px;
+	 	border-radius: 50%;
+	 	box-sizing: border-box;
+	 	overflow: hidden;
+/*	 	line-height: 156px; 180-12(보더값)-12(보더값)=156px을 먹여도 세로가운데정렬됨
+overflow hidden으로 아이콘이 박스 밖으로 나가면 숨겨줌*/
+	 }
+	 /*각 박스마다 둥근값을 주고 박스사이징을 줘야만 포함해서 보더값을 12px로 준다.*/
+
+	 #skill_section .skill_box div::after { 
+	 	content: "";
+	 	display: inline-block;
+	 	vertical-align: middle;
+	 	height: 100%;
+	 }
+
+	 /*after로 이용해서 세로로 가운데 정렬 해주기, 이 때 height가 100%여야 전체범위 안에서 가운데를 찾아줌*/
+
+
+	 #skill_section .skill_box li {
+	 	display: inline-block;
+	 	vertical-align: top;
+	 	font-size:0;
+	 	margin-left: 60px; 
+	 }
+
+	 /*각 아이콘마다 폰트사이즈는 0으로 줘야 마진레프트가 먹으며, 각 아이콘 사이값을 60px로 준다.*/
+
+
+
+	  #skill_section .skill_box li:first-child {
+	  	margin-left: 0;
+	  }
+	  /*첫번째 아이콘의 마진 레프트를 0 줘야한다.*/
+
+	 #skill_section .ps {
+	 	background-color: #001d26;
+	 	border: 12px #00c8ff solid;
+	 }
+
+	 #skill_section .il {
+	 	background-color: #261300;
+	 	border: 12px #ff7c00 solid;
+	 }
+
+	 #skill_section .id {
+	 	background-color: #280012;
+	 	border: 12px #ff3f94 solid;
+	 }
+	  #skill_section .ae {
+	 	background-color: #1f003f;
+	 	border: 12px #cf91ff solid;
+	 }
+	  #skill_section .max {
+	 	background-color: #09a1a1;
+	 	border: 12px #09a1a1 solid;
+	 }
+
+
+	 #skill_section li .text {
+	 	display: block;
+	 	font-family: "Open Sans", sans-serif;
+	 	font-size: 28px;
+	 	margin-top: 20px; /*아이콘과 텍스트 사이의 마진*/
+	 }
+	 #skill_section .skill_box li div img {
+	 	transition: all 0.3s;
+	 }
+	 /*transition : 어떤 한 요소에만 애니메이션을 주고 싶을 때 all : 모두 체크  s : 속도*/
+	 #skill_section .skill_box li div:hover img {
+	 	transform: scale(1.2);
+	 }
+/*	 transform : scale, translate, rotate 로 많이 쓰임, 기본축은 한 가운데로 바꿀 수 있음
+scale은 크기변경으로 (1,1)이 기본값 앞은 너비 뒤는 높이로 배수이다.
+*/
+
+
 
 /*portfolio_section*/
 	 #portfolio_section{
 	 	background-color: #f3f3f3;
 	 }
 
+	 #portfolio_section .content_wrap {
+
+	 }
+
+	 	 #portfolio_section .content_wrap ul{
+	 	 	width: 1160px; /*360x3+40+40=1160px ( 이 말은 즉슨 1120 px 안에 3개 이상이 들어가봤자 자리가 없어서 밑으로 떨어짐 )*/
+	 	 	margin: 0 auto;
+	 	 	overflow: hidden;
+	 	 }
+	 	 #portfolio_section .content_wrap .item{
+	 	 	width: 360px; height: 490px;
+	 	 	background-color: white;
+	 	 	float: left; /*왼쪽 정렬*/
+	 	 	margin: 40px 0 0 40px;
+	 	 	border: 1px solid #d3d3d3;
+	 	 	box-sizing: border-box;
+	 	 }
+	 	 #portfolio_section .content_wrap .item:nth-child(3n+1) {
+	 	 	margin-left: 0;
+	 	 }
+	 	 /*li가 3n+1일 상태에서만 margin-left를 0으로 주는것*/
+
+	 	 #portfolio_section .content_wrap .item .thumbBox {
+	 	 	height: 358px; /*보더값 빼준거*/
+	 	 	overflow: hidden;
+
+	 	 }
+
+	 	 #portfolio_section .content_wrap .item .thumbBox img {
+	 	 	width: 100%; height: 100%; /*부모사이즈에 맞게 들어감*/
+	 	 }
+	 	 #portfolio_section .content_wrap .item .contBox {
+	 	 	padding: 15px 15px 0; /*상좌우는 15px bottom값은 0px*/ 
+	 	 }
+
+	 	 #portfolio_section .content_wrap .item .contBox .tit {
+	 	 	font-size: 18px;
+	 	 }
+	 	 #portfolio_section .content_wrap .item .contBox .type {
+	 	 	color:#fa0064;
+	 	 	margin-top: 8px;
+	 	 	display: block; /*type을 block으로 바꿔줘야 margin-top이 먹는다. */
+	 	 }
+
+	 	 #portfolio_section .content_wrap .item .contBox .desc {
+	 	 	color: #999;
+	 	 	line-height:16px; height:48px; /*16x3=48*/
+	 	 	margin-top: 10px;
+	 	 	overflow: hidden; /*넘어가는 애들 자르기*/
+		 	text-overflow:ellipsis;
+			-webkit-line-clamp:3; /* 셋째줄에서 ... 표시 */
+			-webkit-box-orient: vertical;
+			display: -webkit-box;
+			word-wrap:break-word;
+			-o-text-overflow:ellipsis;
+			/*388-393번째 줄은 텍스트가 해당 줄 이상 흘러넘칠시에 줄여주는 코드이다. */ 	 	
+	 	 }	 	 
+
+	/*s : footer*/
+	 #footer_container .cp {
+	 	color: #fff;
+	 	font-size: 16px;
+	 	width : 100%;
+	 	height : 100px;
+	 	letter-spacing: -1px;
+	 	background-color: #202529;
+	 	font-family: "Raleway", sans-serif;
+	 	text-align: center;
+	 	line-height: 100px;
+
+	 }
+
+	 /*e : footer*/
